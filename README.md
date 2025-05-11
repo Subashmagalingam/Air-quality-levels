@@ -36,7 +36,7 @@ print("Dataset created and saved as 'air_quality_data.csv'")
 import pandas as pd
 
 # Step 1: Load the dataset
-file_path = "/mnt/data/air_quality_data .csv"
+file_path = "air_quality_data .csv"
 df = pd.read_csv(file_path)
 
 # Step 2: Basic dataset overview
@@ -60,7 +60,7 @@ df = df.drop_duplicates()
 df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_')
 
 # Step 7: Save cleaned data
-cleaned_file_path = "/mnt/data/cleaned_air_quality_data.csv"
+cleaned_file_path = "cleaned_air_quality_data.csv"
 df.to_csv(cleaned_file_path, index=False)
 
 print("\nCleaning complete. Cleaned file saved to:", cleaned_file_path)
